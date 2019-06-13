@@ -39,7 +39,7 @@ sam local invoke VenafiPyFunction --event event.json
 sam local start-api
 ```
 
-If the previous command ran successfully you should now be able to hit the following local endpoint to invoke your function `http://localhost:3000/hello`
+If the previous command ran successfully you should now be able to hit the following local endpoint to invoke your function `http://localhost:3000/policy`
 
 **SAM CLI** is used to emulate both Lambda and API Gateway locally and uses our `template.yaml` to understand how to bootstrap this environment (runtime, where the source code is, etc.) - The following excerpt is what the CLI will read in order to initialize an API and its routes:
 
@@ -49,7 +49,7 @@ Events:
      TPP:
         Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
         Properties:
-            Path: /hello
+            Path: /policy
             Method: get
 ```
 
@@ -143,7 +143,7 @@ Here are a few things you can try to get more acquainted with building serverles
 
 ### Create an additional API resource
 
-* Create a catch all resource (e.g. /hello/{proxy+}) and return the name requested through this new path
+* Create a catch all resource (e.g. /policy/{proxy+}) and return the name requested through this new path
 * Update tests
 
 ### Step-through debugging
