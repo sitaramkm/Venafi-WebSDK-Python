@@ -67,7 +67,6 @@ def lambda_handler(event, context):
     
     """
 
-    
     tppurl = event['tppurl']
     tppusername = event['tppusername']
     tpppassword = event['tpppassword']
